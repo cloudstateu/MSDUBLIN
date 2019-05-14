@@ -19,10 +19,12 @@
 2. Install Azure CLI. 
 3. Open command line and type: az login 
 4. Procced with instruction in console window. 
-5. After login process type in console: <code> az aks create --resource-group student0X --name student0XCluster --generate-ssh-keys </code>
-6. After cluster is deployed (it make takes up to 30 minutes), install Kubernetes CLI by typing in console: <code> az aks kubernetes install-cli </code> On Windows, the default installation is c:\program files (x86)\kubectl.exe. You may need to add this file to the Windows path. 
-7. Get credentials to cluster: <code> az acs kubernetes get-credentials --resource-group student0X --name student0XCluster </code>
-8. Verify connection using command: <code>kubectl get nodes </code>
+5. After login process type in console: <code> az aks create --resource-group student0X --name student0XCluster --generate-ssh-keys </code>. As we have not defined any params of cluster, Azure will use some defaults. 
+6. After cluster is deployed (it may takes up to 20 minutes), install Kubernetes CLI by typing in console: <code> az aks kubernetes install-cli </code> On Windows, the default installation is C:\Program Files (x86)\kubectl.exe. You may need to add this file to the Windows path. 
+7. Get credentials to cluster: <code> az acs kubernetes get-credentials --resource-group student0X --name student0XCluster </code>. Use your resource group name and your cluster name.
+8. Verify connection using command: <code>kubectl get nodes </code>. You can also type commands like:
+<code>kubectl get pods </code>
+<code>kubectl get services </code>
 
 ## Task 2: Create secret and deploy POD
 
