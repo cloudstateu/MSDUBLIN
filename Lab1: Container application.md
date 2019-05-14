@@ -129,7 +129,6 @@ function sendDataToClient(message, client) {
 19. Run whole application using command:
 * <code>docker run -e  DBURL=mongodb://admin:secret@localhost:27017' -e TIMEOUT=5000 -p 3000:3000 berealtime</code>
 
-
 ## TASK 2: Create Azure Container Repository and push image
 1. Open Azure Portal. 
 2. Click Create Resource on left menu. 
