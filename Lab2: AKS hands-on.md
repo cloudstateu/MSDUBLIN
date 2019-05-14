@@ -107,5 +107,21 @@ spec:
  7. Verify status using command: <code>kubectl get pods</code>
 
 ## Task 3: Create persistance volume claim
+1. Create another deployment file (pers-volume.yaml)
+'''
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: azure-managed-disk
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: managed-premium
+  resources:
+    requests:
+      storage: 5Gi
+'''
+2. Claim the volume by running
+<code>kubectl apply -f azure-premium.yaml</code>
  
 <center><p>&copy; 2019 Chmurowisko Sp. z o.o.<p></center>
