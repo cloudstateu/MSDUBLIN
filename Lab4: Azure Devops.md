@@ -1,4 +1,4 @@
-<img src="../../img/logo.jpg" alt="Cloudstate logo" width="200" align="right">
+<img src="https://github.com/cloudstateu/MSDUBLIN/blob/master/img/logo.jpg" alt="Cloudstate logo" width="200" align="right">
 <br><br>
 <br><br>
 <br><br>
@@ -9,19 +9,19 @@
 
 #### This lab will demonstrate:
 * Creating CI/CD pipelines
-* Build Nodejs application in cloud.
-* Deploy to WebApp
+* Build NodeJS application in Cloud.
+* Deploy to Azure WebApp
 
 
 ### Requirements
-* Visual studio code
+* Visual Studio Code (https://code.visualstudio.com/)
 * Azure extension to VS Code https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice
-* git client
+* git client on Your machine
 
 ## Task 1: Initialize account and push code
 
 1. Open url: https://dev.azure.com
-2. Create project: fevisualization
+2. Create project: fevisualization (or the other name you choose)
 3. On left menu click Repos -> Files.
 4. Clone repository using VS Code.
 5. Provide directory and credentials for repo.
@@ -65,14 +65,14 @@ yarn-error.log
 .bazelrc.user
 ```
 7. Copy solution files from lab3 to your git directory.
-8. Open in vs code app folder.
+8. Open in VS Code app folder.
 9. Click git in left menu.
 10. Commit all changes.
 11. Push it to repository.
 
 ## Task 2: Create build definition
 1. Click Pipelines -> Builds on left menu.
-2. Click *New pipeline* button.
+2. Click *New Pipeline* button.
 3. Choose Azure repository and select your repo.
 4. Select Nodejs with Angular as pipeline configuration.
 5. Add task: *Publish artifact* and choose target path *dist*
@@ -80,7 +80,7 @@ yarn-error.log
 
 ## Task 3: Create realese definition
 1. Click Pipelines -> Releases on left menu.
-2. Click *New pipeline* button.
+2. Click *New Pipeline* button.
 3. Select template *Azure App Service deployment*.
 4. Click *Add an artifact*.
 5. Select artifact from build.
@@ -88,7 +88,7 @@ yarn-error.log
 7. Configure Azure Subsrciption and click *Authorize*
 8. Choose a web app created at lab 3.
 9. Click on *Deploy Azure App Service*
-10. Choose resource group from dropbox.
+10. Choose resource group from dropdown box.
 11. Select stage deployment slot.
 12. Click *Save*
 13. Go to Pipelines -> Releases
